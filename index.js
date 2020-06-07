@@ -5,7 +5,7 @@ const Manager = require("./lib/Manager");
 const Engineer = require("./lib/Engineer");
 const Intern = require("./lib/Intern");
 //do roles need to be lets??^^
-const outputPath = path.resolve(__dirname, "ouput", "team.html");
+const outputPath = path.resolve(__dirname, "output", "team.html");
 
 const render = require("./lib/htmlRenderer");
 
@@ -194,6 +194,7 @@ function init() {
 
     function buildTeamPage() {
         fs.writeFileSync(outputPath, render(teamMembers), "utf-8");
+        console.log("Team page created in output folder!");
     }
 
     createManager();
